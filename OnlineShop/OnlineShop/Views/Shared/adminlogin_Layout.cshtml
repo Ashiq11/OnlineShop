@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login form</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/")css/style1.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <form class="login" method="post">
+        <p class="title">Log in as an Admin</p>
+            <input type="text" name="username" placeholder="Username" autofocus />
+            <i class="fa fa-user"></i>
+            <input type="password" name="password" placeholder="Password" />
+            <i class="fa fa-key"></i>
+            <button>
+                <i class="spinner"></i>
+                <span class="state"><b style="font-size:larger">Log in</b></span>
+            </button>
+        </form>
+    </div>
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿@model OnlineShopEntity.Product
+
+@{
+    ViewBag.Title = "Details of the Product";
+    Layout = "~/Views/Shared/admin_Layout.cshtml";
+}
+<div class="center_content">
+    <div class="center_title_bar">Details</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="contact_form">
+                <div>
+                    <h4>Product</h4>
+                    <hr />
+                    <table>
+                        <tr>
+                            <td><b>Product Name :</b></td>
+                            <td>@Model.ProductName</td>
+                        </tr>
+                        <tr>
+                            <td><b>Category ID :</b></td>
+                            <td>@Model.CategoryID</td>
+                        </tr>
+                        <tr>
+                            <td><b>Unit Price :</b></td>
+                            <td>@Model.UnitPrice</td>
+                        </tr>
+                        <tr>
+                            <td><b>Description :</b></td>
+                            <td>@Model.Description</td>
+                        </tr>
+                        <tr>
+                            <td><b>Size :</b></td>
+                            <td>@Model.Size</td>
+                        </tr>
+                        <tr>
+                            <td><b>Discount :</b></td>
+                            <td>@Model.Discount</td>
+                        </tr>
+                        <tr>
+                            <td><b>Unit In Stock :</b></td>
+                            <td>@Model.UnitInStock</td>
+                        </tr>
+                        <tr>
+                            <td><b>Product Available :</b></td>
+                            <td>@Model.ProductAvailable</td>
+                        </tr>
+                        <tr>
+                            <td><b>Image :</b></td>
+                            <td><img src="@Url.Content("~/Content/")images/@Model.Image" alt="@Model.Image" border="0" width="170" height="150" /></td>
+                        </tr>
+                    </table>
+                    <br/>
+                </div>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

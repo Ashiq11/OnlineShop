@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Session["iteam"] != null)
+{
+    if ((int)Session["iteam"] == 0)
+    {
+        <h2>You have not selected any product yet. Please select a product first...</h2>
+        <br /><br />
+        <h2>
+            <a href="~/Home/Index">Return To Home</a>
+        </h2>
+    }
+    else
+    {
+        <h1>Checkout Products</h1>
+        <br />
+        <h2>Number of products: @Session["iteam"]</h2>
+        <h2>Price: @Session["tot"] Taka</h2>
+        <form method="post">
+            <h2>
+                Address :
+                <input type="text" name="address">
+            </h2>
+            <input type="submit" name="submit" value="Confirm"><span> Payment on delivery </span>
+        </form>
+        <h2>You will get your product within the next 5 business days</h2>
+    }
+}
+
+else
+{
+    <h1>Checkout Products First Else</h1>
+
+}
+

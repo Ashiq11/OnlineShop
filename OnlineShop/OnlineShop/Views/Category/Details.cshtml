@@ -1,0 +1,35 @@
+﻿@model OnlineShopEntity.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/admin_Layout.cshtml";
+}
+
+<div class="center_content">
+    <div class="center_title_bar">Details</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="contact_form">
+
+                <div>
+                    <h4>Category Details</h4>
+                    <hr />
+                    <table>
+                        <tr>
+                            <td><b>Category Name :</b></td>
+                            <td>@Model.CategoryName</td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                <br/>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.CategoryID }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

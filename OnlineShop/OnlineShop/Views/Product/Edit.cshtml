@@ -1,0 +1,67 @@
+﻿@model OnlineShopEntity.Product
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/admin_Layout.cshtml";
+}
+
+
+<div class="center_content">
+    <div class="center_title_bar">Edit Product</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="contact_form">
+                <h4>Product</h4>
+                <hr />
+                <form method="post">
+                    <table>
+                        <tr>
+                            <td><b>Product Name :</b></td>
+                            <td><input type="text" name="name" value="@Model.ProductName" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Category ID :</b></td>
+                            <td><input type="text" name="categoryId" value="@Model.CategoryID" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Unit Price :</b></td>
+                            <td><input type="text" name="unitPrice" value="@Model.UnitPrice" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Description :</b></td>
+                            <td><input type="text" name="description" value="@Model.Description" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Size :</b></td>
+                            <td><input type="text" name="size" value="@Model.Size" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Discount :</b></td>
+                            <td><input type="text" name="discount" value="@Model.Discount" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Unit In Stock :</b></td>
+                            <td><input type="text" name="stock" value="@Model.UnitInStock" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Image :</b></td>
+                            <td>
+                                <input type="file" name="Image" value="@Model.Image" style="background-color:darkorange; color:white;"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <div class="form_row">
+                        <input type="submit" name="save" value="Save" style="background-color:darkgreen; color:white;" />
+                    </div>
+                </form>
+                <br />
+                <div>
+                    <b>@Html.ActionLink("Back to List", "Index")</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

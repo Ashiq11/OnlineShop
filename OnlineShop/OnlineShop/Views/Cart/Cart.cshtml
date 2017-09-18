@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    double tot = 0;
+}
+@using OnlineShop.Controllers
+
+<h2>Cart</h2>
+<div style="font-size:16px">
+    <table cellpadding="2" cellspacing="3" border="1">
+        <tr>
+            <th>Option</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Discount Percentage</th>
+            <th>Discount Amount</th>
+            <th>Actual Price</th>
+
+            @foreach (Iteam iteam in (List<Iteam>)Session["cart"])
+            {
+            <tr>
+                <td>@Html.ActionLink("Delete", "Delete", "Cart", new { id = iteam.Product.ProductID }, null)</td>
+                <td>@iteam.Product.ProductID</td>
+                <td>@iteam.Product.ProductName</td>
+                <td>@iteam.Product.UnitPrice</td>
+                <td>@iteam.Quantity</td>
+                <td>@iteam.Product.Discount</td>
+                @{double pr = iteam.Quantity * iteam.Product.UnitPrice;
+                double di = (pr * iteam.Product.Discount) / 100;
+                double tp = pr - di;
+                }
+                <td>@di</td>
+                <td>@tp</td>
+
+                @{
+                    tot = tot + tp;
+                }
+
+            </tr>
+                    }
+            @{Session["tot"] = tot;};
+
+        </table>
+        <div style="text-align:center">
+            <br /><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total Price: @tot
+        </div>
+        <br />
+        <a href="~/Home/Index">Continue Shopping</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="~/Checkout/Index">Proceed To Checkout</a>
+    </div>

@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "MobileDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using OnlineShop.Controllers;
+<div class="center_content">
+    <div class="center_title_bar">Mobile</div>
+    @foreach (var item in ViewBag.Mobile)
+    {
+        <div class="prod_box">
+            <div class="top_prod_box"></div>
+            <div class="center_prod_box">
+                <div class="product_title"><a href="~/Product/Details/@item.ProductID">@item.ProductName</a></div>
+                <div class="product_img"><a href="~/Product/Details/@item.ProductID"><img src="@Url.Content("~/Content/")images/@item.Image" alt="@item.Image" border="0" width="150" height="130" /></a></div>
+                <div class="prod_price"><span class="price">@item.UnitPrice</span>Tk</div>
+            </div>
+
+            <div class="bottom_prod_box"></div>
+            <div class="prod_details_tab">
+                <a href="~/Cart/Index/@item.ProductID" title="header=[Add to cart] body=[&nbsp;] fade=[on]">
+                    <img src="@Url.Content("~/Content/")images/cart.gif" alt="" border="0" class="left_bt" />
+                </a>
+                <a href="#" title="header=[Specials] body=[&nbsp;] fade=[on]">
+                    <img src="@Url.Content("~/Content/")images/favs.gif" alt="" border="0" class="left_bt" />
+                </a>
+                <a href="~/Product/Details/@item.ProductID" class="prod_details">details</a>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- end of center content -->
+<div class="right_content">
+    <div class="shopping_cart">
+        <div class="cart_title">Shopping cart</div>
+        <div class="cart_details">
+
+            @Session["iteam"] Iteams Added
+
+            <br />
+            <span class="border_cart"></span> Total: <span class="price">@Session["tot"] taka</span>
+        </div>
+        <div class="cart_icon"><a href="~/Cart/View" title="header=[Checkout] body=[&nbsp;] fade=[on]"><img src="@Url.Content("~/Content/")images/shoppingcart.png" alt="" width="48" height="48" border="0" /></a></div>
+    </div>
+</div>
+

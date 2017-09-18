@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="center_content">
+    <div class="center_title_bar">Create a new Account</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="contact_form">
+                <h4>Sign up for a new user</h4>
+                <hr />
+                <from method="post">
+                    <table>
+                        <tr>
+                            <td><b>First Name<span>*</span> :</b></td>
+                            <td><input name="firstname" type="text" placeholder="Enter first name"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Last Name<span>*</span> :</b></td>
+                            <td><input name="lastname" type="text" placeholder="Enter last name"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Username<span>*</span> :</b></td>
+                            <td><input name="username" type="text" placeholder="Username"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Password<span>*</span> :</b></td>
+                            <td><input name="password" type="password" placeholder="Password"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Email<span>*</span> :</b></td>
+                            <td><input name="email" type="text" placeholder="abc@gmail.com"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Age :</b></td>
+                            <td><input type="text" name="age" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td><b>Gender<span>*</span> :</b></td>
+                            <td>
+                                <input type="radio" name="gender" value="male">Male
+                                <input type="radio" name="gender" value="female">Female
+                                <input type="radio" name="gender" value="other">Other
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Mobile<span>*</span> :</b></td>
+                            <td><input name="phone" type="text" placeholder="Mobile"></td>
+                        </tr>
+                        <tr>
+                            <td class="checkbox"><b>Country<span>*</span> :</b></td>
+                            <td><input name="country" type="text" placeholder="Country"></td>
+                         </tr>
+                        <tr>
+                            <td><b>City<span>*</span> :</b></td>
+                            <td><input name="city" type="text" placeholder="City"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Address<span></span> :</b></td>
+                            <td><input name="address" type="text" placeholder="Address"></td>
+                        </tr>
+                    </table>
+                    <br />
+                    <div class="form_row">
+                        <input type="submit" name="register" value="Register" style="background-color:green; color:white;" />
+                    </div>
+                </from>
+                <div>
+                    <b>@Html.ActionLink("Already registerd", "Index","Login")</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,61 @@
+﻿@using OnlineShop.Controllers;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="center_content">
+    <div class="center_title_bar">Contact Us</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="contact_form">
+                <div class="form_row">
+                    <label class="contact"><strong>Name:</strong></label>
+                    <input type="text" class="contact_input" />
+                </div>
+                <div class="form_row">
+                    <label class="contact"><strong>Email:</strong></label>
+                    <input type="text" class="contact_input" />
+                </div>
+                <div class="form_row">
+                    <label class="contact"><strong>Phone:</strong></label>
+                    <input type="text" class="contact_input" />
+                </div>
+                <div class="form_row">
+                    <label class="contact"><strong>Company:</strong></label>
+                    <input type="text" class="contact_input" />
+                </div>
+                <div class="form_row">
+                    <label class="contact"><strong>Message:</strong></label>
+                    <textarea class="contact_textarea"></textarea>
+                </div>
+                <br /><br /><br />
+                <div>
+                    <button style="height:25px; width:50px; font-size:10pt;color:white;background-color:green;border:2px solid #336600;padding:2px"> send </button>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_prod_box_big"></div>
+    </div>
+</div>
+<!-- end of center content -->
+<div class="right_content">
+    <div class="shopping_cart">
+        <div class="cart_title">Shopping cart</div>
+        <div class="cart_details">
+         @{int count = 0;
+            foreach (Iteam iteam in (List<Iteam>)Session["cart"])
+            {
+
+                count += @iteam.Quantity;
+
+            }
+        }
+            @count
+            <br />
+            <span class="border_cart"></span> Total: <span class="price">@Session["tot"] Taka</span>
+        </div>
+        <div class="cart_icon"><a href="#" title="header=[Checkout] body=[&nbsp;] fade=[on]"><img src="~/Content/images/shoppingcart.png" alt="" width="48" height="48" border="0" /></a></div>
+    </div>
+</div>

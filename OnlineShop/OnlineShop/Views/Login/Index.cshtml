@@ -1,0 +1,65 @@
+﻿@using OnlineShop.Controllers;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="center_content">
+    <div class="center_title_bar">My account</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="contact_form">
+                <form method="post">
+                    <div class="form_row">
+                        <label class="contact"><strong>User Name:</strong></label>
+                        <input type="text" class="contact_input" name="username" required placeholder="abc@gmail.com" />
+                    </div><br />
+                    <div class="form_row">
+                        <label class="contact"><strong>Password:</strong></label>
+                        <input type="password" name="password" class="contact_input" required placeholder="Password" />
+                    </div>
+                    <br />
+
+                    <div class="form_row">
+
+                        <div class="g-recaptcha" data-sitekey="6LfkETAUAAAAANRwNWcXD39Q4udAf44b860IJjDK">
+                        </div>
+                    </div>
+                    <br />
+                    <div>
+                        <p class="aa-lost-password">
+                            <b>@Html.ActionLink("Forget password", "Register", "Customer")</b><br/><br/>
+                            <input type="submit" name="submit" value="Login" style="background-color:cornflowerblue; color:white;" />
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <b>@Html.ActionLink("Create a new account", "Register", "Customer")</b>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom_prod_box_big"></div>
+    </div>
+</div>
+
+<!-- end of center content -->
+<div class="right_content">
+    <div class="shopping_cart">
+        <div class="cart_title">Shopping cart</div>
+        <div class="cart_details">
+            @{int count = 0;
+                foreach (Iteam iteam in (List<Iteam>)Session["cart"])
+                {
+
+                count += @iteam.Quantity;
+
+                }
+            }
+            <div> Quantity : <b style="color:orangered;font-size:large">@count</b></div> <br />
+            <span class="border_cart"></span> Total: <span class="price">@Session["tot"] Taka</span>
+        </div>
+        <div class="cart_icon"><a href="#" title="header=[Checkout] body=[&nbsp;] fade=[on]"><img src="~/Content/images/shoppingcart.png" alt="" width="48" height="48" border="0" /></a></div>
+    </div>
+</div>

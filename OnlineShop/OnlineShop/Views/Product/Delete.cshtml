@@ -1,0 +1,73 @@
+﻿@model OnlineShopEntity.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/admin_Layout.cshtml";
+}
+
+
+<div class="center_content">
+    <div class="center_title_bar">Delete Product</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="contact_form">
+                <h3>Are you sure you want to delete this?</h3>
+                <h4 style="color:green">Product</h4>
+                <hr />
+
+                <form method="post">
+                    <table>
+                        <tr>
+                            <td><b>Product Name :</b></td>
+                            <td>@Model.ProductName</td>
+                        </tr>
+                        <tr>
+                            <td><b>Category ID :</b></td>
+                            <td>@Model.CategoryID</td>
+                        </tr>
+                        <tr>
+                            <td><b>Unit Price :</b></td>
+                            <td>@Model.UnitPrice</td>
+                        </tr>
+                        <tr>
+                            <td><b>Description :</b></td>
+                            <td>@Model.Description</td>
+                        </tr>
+                        <tr>
+                            <td><b>Size :</b></td>
+                            <td>@Model.Size</td>
+                        </tr>
+                        <tr>
+                            <td><b>Discount :</b></td>
+                            <td>@Model.Discount</td>
+                        </tr>
+                        <tr>
+                            <td><b>Unit In Stock :</b></td>
+                            <td>@Model.UnitInStock</td>
+                        </tr>
+                        <tr>
+                            <td><b>Product Available :</b></td>
+                            <td>@Model.ProductAvailable</td>
+                        </tr>
+                        <tr>
+                            <td><b>Image :</b></td>
+                            <td><img src="@Url.Content("~/Content/")images/@Model.Image" alt="@Model.Image" border="0" width="170" height="150" /></td>
+                        </tr>
+                    </table>
+                    <br/>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Delete" class="btn btn-default" style="background-color:crimson;color:white;" /> |
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                    }
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

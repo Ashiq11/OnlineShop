@@ -1,0 +1,28 @@
+﻿@model OnlineShopEntity.Category
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/admin_Layout.cshtml";
+}
+
+
+<div class="center_content">
+    <div class="center_title_bar">Add Category</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="contact_form">
+                <h2>Create</h2>
+                <form method="post">
+                    CategoryName:<input type="text" name="CategoryName" />
+                    <input type="submit" name="submit" value="Add" />
+                </form>
+
+                <div>
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

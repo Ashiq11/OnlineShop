@@ -1,0 +1,70 @@
+﻿@using OnlineShop.Controllers;
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="center_content">
+    <div class="center_title_bar">@Model.ProductName</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="product_img_big">
+                <a href="javascript:popImage('@Url.Content("~/Content/")images/@Model.Image','Some Title')" width="250" height="200" title="header=[Zoom] body=[&nbsp;] fade=[on]"><img src="@Url.Content("~/Content/")images/@Model.Image" alt="" border="0" width="170" height="150" /></a>
+                <div class="thumbs"> <a href="#" title="header=[Thumb1] body=[&nbsp;] fade=[on]"><img src="@Url.Content("~/Content/")images/@Model.Image" width="70" height="50" alt="" border="0" /></a> <a href="#" title="header=[Thumb2] body=[&nbsp;] fade=[on]"><img src="@Url.Content("~/Content/")images/@Model.Image" width="50" height="50" alt="" border="0" /></a> <a href="#" title="header=[Thumb3] body=[&nbsp;] fade=[on]"><img src="@Url.Content("~/Content/")images/@Model.Image" width="50" height="50" alt="" border="0" /></a> </div>
+            </div>
+            <div class="details_big_box">
+                <div class="product_title_big">@Model.ProductName</div>
+                <div class="specifications">
+                    Description: <span>@Model.Description</span>
+                    <br />
+                    Size: <span>@Model.Size</span>
+                    <br />
+                    Discount: <span style="color:darkslateblue"><b>@Model.Discount</b>%</span>
+                </div>
+                <div class="prod_price_big">Price: <span class="price">@Model.UnitPrice</span>TK</div>
+                <a href="~/Cart/Index/@Model.ProductID" class="addtocart">add to cart</a>
+            </div>
+        </div>
+        <div class="bottom_prod_box_big"></div>
+    </div>
+</div>
+
+
+
+<div class="right_content">
+    <div class="shopping_cart">
+        <div class="cart_title">Shopping cart</div>
+        <div class="cart_details">
+            @{int count = 0;
+                foreach (Iteam iteam in (List<Iteam>)Session["cart"])
+                {
+
+                    count += @iteam.Quantity;
+
+                }
+            }
+            <div> Quantity : <b style="color:orangered;font-size:large">@count</b></div>  <br />
+            <span class="border_cart"></span> Total: <span class="price">@Session["tot"] Taka</span>
+        </div>
+        <div class="cart_icon"><a href="#" title="header=[Checkout] body=[&nbsp;] fade=[on]"><img src="@Url.Content("~/Content/")images/shoppingcart.png" alt="" width="48" height="48" border="0" /></a></div>
+    </div>
+    <div class="title_box">What’s new</div>
+    <div class="border_box">
+        <div class="product_title"><a href="details.html">Motorola 156 MX-VL</a></div>
+        <div class="product_img"><a href="details.html"><img src="@Url.Content("~/Content/")images/p2.gif" alt="" border="0" /></a></div>
+        <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+    </div>
+    <div class="title_box">Manufacturers</div>
+    <ul class="left_menu">
+        <li class="odd"><a href="#">Sony</a></li>
+        <li class="even"><a href="#">Samsung</a></li>
+        <li class="odd"><a href="#">Daewoo</a></li>
+        <li class="even"><a href="#">LG</a></li>
+        <li class="odd"><a href="#">Fujitsu Siemens</a></li>
+        <li class="even"><a href="#">Motorola</a></li>
+        <li class="odd"><a href="#">Phillips</a></li>
+        <li class="even"><a href="#">Beko</a></li>
+    </ul>
+    <div class="banner_adds"> <a href="#"><img src="@Url.Content("~/Content/")images/bann1.jpg" alt="" border="0" /></a> </div>
+</div>
