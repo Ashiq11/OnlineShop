@@ -3,3 +3,8 @@ D:\Semester 10\ATP 2\Final term\Project\Ashiq\OnlineShop\OnlineShopEntity\bin\De
 D:\Semester 10\ATP 2\Final term\Project\Ashiq\OnlineShop\OnlineShopEntity\obj\Debug\OnlineShopEntity.dll
 D:\Semester 10\ATP 2\Final term\Project\Ashiq\OnlineShop\OnlineShopEntity\obj\Debug\OnlineShopEntity.pdb
 D:\Semester 10\ATP 2\Final term\Project\Ashiq\OnlineShop\OnlineShopEntity\obj\Debug\OnlineShopEntity.csprojResolveAssemblyReference.cache
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopEntity\bin\Debug\OnlineShopEntity.dll
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopEntity\bin\Debug\OnlineShopEntity.pdb
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopEntity\obj\Debug\OnlineShopEntity.csprojResolveAssemblyReference.cache
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopEntity\obj\Debug\OnlineShopEntity.dll
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopEntity\obj\Debug\OnlineShopEntity.pdb

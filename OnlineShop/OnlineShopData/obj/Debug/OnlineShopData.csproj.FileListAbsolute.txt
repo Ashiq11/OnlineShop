@@ -10,3 +10,15 @@ D:\Semester 10\ATP 2\Final term\Project\Ashiq\OnlineShop\OnlineShopData\bin\Debu
 D:\Semester 10\ATP 2\Final term\Project\Ashiq\OnlineShop\OnlineShopData\obj\Debug\OnlineShopData.csprojResolveAssemblyReference.cache
 D:\Semester 10\ATP 2\Final term\Project\Ashiq\OnlineShop\OnlineShopData\obj\Debug\OnlineShopData.dll
 D:\Semester 10\ATP 2\Final term\Project\Ashiq\OnlineShop\OnlineShopData\obj\Debug\OnlineShopData.pdb
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\bin\Debug\OnlineShopData.dll.config
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\bin\Debug\OnlineShopData.dll
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\bin\Debug\OnlineShopData.pdb
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\bin\Debug\EntityFramework.dll
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\bin\Debug\EntityFramework.SqlServer.dll
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\bin\Debug\OnlineShopEntity.dll
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\bin\Debug\OnlineShopEntity.pdb
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\bin\Debug\EntityFramework.xml
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\bin\Debug\EntityFramework.SqlServer.xml
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\obj\Debug\OnlineShopData.csprojResolveAssemblyReference.cache
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\obj\Debug\OnlineShopData.dll
+D:\GIT_HOME\atp2\atp2_OnlineShop\OnlineShop\OnlineShopData\obj\Debug\OnlineShopData.pdb
